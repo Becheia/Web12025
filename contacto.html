@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSolutions - Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú simple -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">TechSolutions</a>
+            </div>
+            <div class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="articulos.html">Servicios</a>
+                <a href="contacto.html" class="activo">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="titulo-pagina">
+            <h1>Contáctanos</h1>
+            <p>Completa el formulario y nos pondremos en contacto contigo.</p>
+        </section>
+
+        <div class="contenedor-contacto">
+            <!-- Formulario -->
+            <section id="formulario-section">
+                <h2>Formulario de Contacto</h2>
+                <p class="nota">* Campos obligatorios</p>
+                
+                <form id="formulario">
+                    <div>
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" required maxlength="50">
+                        <div class="error" id="error-nombre"></div>
+                    </div>
+
+                    <div>
+                        <label for="email">Correo electrónico *</label>
+                        <input type="email" id="email" required>
+                        <div class="error" id="error-email"></div>
+                    </div>
+
+                    <div>
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" required>
+                        <div class="error" id="error-telefono"></div>
+                        <p class="ayuda">Mínimo 7 dígitos. Ej: 612345678</p>
+                    </div>
+
+                    <div>
+                        <label for="servicio">Servicio de interés</label>
+                        <select id="servicio">
+                            <option value="">Selecciona...</option>
+                            <option value="web">Desarrollo Web</option>
+                            <option value="apps">Apps Móviles</option>
+                            <option value="cloud">Soluciones Cloud</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" rows="4" required maxlength="500"></textarea>
+                        <div class="error" id="error-mensaje"></div>
+                        <p class="contador">Caracteres: <span id="contador">0</span>/500</p>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="privacidad" required>
+                        <label for="privacidad">Acepto la política de privacidad *</label>
+                        <div class="error" id="error-privacidad"></div>
+                    </div>
+
+                    <div class="botones">
+                        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                        <button type="reset" class="btn-limpiar">Limpiar</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Información de contacto -->
+            <aside class="info-contacto">
+                <div class="info">
+                    <h3><i class="fas fa-map-marker-alt"></i> Oficina</h3>
+                    <p>Calle Tecnología, 123</p>
+                    <p>28010 Madrid, España</p>
+                </div>
+
+                <div class="info">
+                    <h3><i class="fas fa-phone"></i> Teléfonos</h3>
+                    <p>Ventas: +34 912 345 678</p>
+                    <p>Soporte: +34 913 456 789</p>
+                </div>
+
+                <div class="info">
+                    <h3><i class="fas fa-envelope"></i> Email</h3>
+                    <p>info@techsolutions.com</p>
+                    <p>soporte@techsolutions.com</p>
+                </div>
+
+                <div class="info">
+                    <h3><i class="fas fa-clock"></i> Horario</h3>
+                    <p>Lunes a Viernes</p>
+                    <p>9:00 - 18:00</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h3>TechSolutions</h3>
+                <p>Innovación y tecnología para tu negocio</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Enlaces</h3>
+                <a href="index.html">Inicio</a>
+                <a href="articulos.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-columna">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> info@techsolutions.com</p>
+                <p><i class="fas fa-phone"></i> +34 912 345 678</p>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2023 TechSolutions. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/navegacion.js"></script>
+    <script src="js/validacion.js"></script>
+</body>
+</html>
