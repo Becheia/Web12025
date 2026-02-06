@@ -42,9 +42,10 @@ class ValidacionFormulario {
                 return regexEmail.test(valor);
                 
             case 'telefono':
-                // Validación simple: mínimo 7 dígitos
-                const numeros = valor.replace(/\D/g, '');
-                return numeros.length >= 7;
+                const numeros = valor.replace(/\D/g, ''); 
+                const tieneLongitudValida = numeros.length >= 7 && numeros.length <= 15;
+                const tieneFormatoValido = /^[+]?[\d\s\-\(\)]{7,}$/.test(valor);
+                return tieneLongitudValida && tieneFormatoValido;
                 
             case 'mensaje':
                 return valor.length >= 10 && valor.length <= 500;
@@ -82,7 +83,7 @@ class ValidacionFormulario {
         const campos = [
             {nombre: 'nombre', msg: 'El nombre debe tener entre 2 y 50 caracteres'},
             {nombre: 'email', msg: 'Ingresa un email válido'},
-            {nombre: 'telefono', msg: 'Ingresa un teléfono válido (mínimo 7 dígitos)'},
+            {nombre: 'telefono', msg: 'Teléfono inválido. Debe tener entre 7 y 15 Numeros'},
             {nombre: 'mensaje', msg: 'El mensaje debe tener entre 10 y 500 caracteres'},
             {nombre: 'privacidad', msg: 'Debes aceptar la política de privacidad'}
         ];
